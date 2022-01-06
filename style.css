@@ -1,0 +1,360 @@
+/************ Global ***************/
+:root {
+    --main-color : #F0A500;
+    --sec-color : #252525;
+}
+body {
+    font-family: serif;
+    overflow-x: hidden;
+}
+
+/************* Info ****************/
+.info-bar {
+    height: 40px; 
+    background-color: #272827;
+}
+.info-bar {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+/*********** Bootstrap btn **************/
+.btn {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    margin-bottom: 40px;
+}
+.btn:hover {
+    color: #fff;
+    background-color: var(--main-color);
+}
+/************* nav *************/
+.header-navbar {
+    width: 96%;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.7s ease-in;
+}
+.fixed {
+    width: 100%;
+    background-color: var(--sec-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all 0.7s ease-in;
+}
+.navbar-brand span:first-child {
+    color: #fff;
+}
+.navbar-brand span:last-child {
+    margin-top: -10px;
+    color: #F0A500;
+}
+.nav-links {
+    list-style: none;
+}
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a.active {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+.nav-links li a:hover {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+/*  burger  */
+.burger {
+  display: none;
+  margin-right: 20px;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--main-color);
+  margin: 5px;
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px,6px);
+}
+/************  logo  **************/
+.logo {
+    width: 50px;
+}
+.flip {
+    animation-name: flip;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+    @keyframes flip {
+    0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    }
+    40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 60px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 60px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    } 
+    50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 60px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 60px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    } 
+    80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    } 
+    100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    } 
+    }
+    
+/************** header ***************/
+.header {
+    height: 95%;
+    padding-top: 10%;
+    background-image: url('./img/sun16.jpg');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    background-blend-mode: darken;
+}
+.header-title {
+    height: inherit;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+}
+.company-name {
+    font-size: 3rem;
+}
+.header-title p {
+    max-width: 55%;
+}
+.orang-color {
+    color: var(--main-color);
+}
+/* add animation for title */
+.from-left {
+    grid-column: 2 / 3;
+    transform: translateX(-50%);
+}
+.from-right {
+    grid-column: 3 / 4;
+    transform: translateX(50%);
+}
+.from-left,
+.from-right {
+    transition: transform 1s ease-in;
+}
+.from-left.appear,
+.from-right.appear {
+    transform: translateX(0);
+}
+
+/* scroll up btn */
+.scrollUpBtn {
+    opacity: 1;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border: 3px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.scrollUpBtn.hidden {
+    opacity: 0;
+}
+/************** About ****************/
+
+#about p {
+    color: #000;
+}
+/************* Counter **************/
+.counter {
+    background-color: var(--sec-color);
+    color: #fff;
+    font-size: 1.2rem;
+    border-top: 5px double var(--main-color);
+    border-bottom: 5px double var(--main-color);
+}
+.counter span {
+    color: var(--main-color);
+    font-size: 2.5rem;
+}
+.counter p {
+    font-size: 15px;
+}
+.num {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    box-shadow: 1px 1px 3px var(--main-color);
+    color: var(--main-color);
+    margin: auto;
+}
+
+/********** Services *************/
+.chooseUs {
+    background-color: #eee;
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+.fade-in.appear {
+    opacity: 1;
+}
+
+/***********  footer  **********/
+footer {
+    background-image: url("./img/spacesun.jpg");
+    background-repeat: round;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6); 
+    background-blend-mode: darken;
+    color: #fff;
+}
+footer p {
+    max-width: 60%;
+}
+footer .rights {
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+
+
+/* Responsive for Tab Size */
+@media (max-width: 768px) {
+    .nav-links {
+        opacity: 0;
+        position: absolute;
+        right: 0px;
+        top: 60px;
+        height: 200px;
+        width: 50%;
+        background-color: var(--sec-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: all 0.5s ease-in;
+        z-index: 100 !important;
+      }
+      .nav-links li a {
+        color: #eee;
+      }
+      .burger {
+        display: block;
+      }
+      .nav-links.show {
+        opacity: 1;
+      }
+    .logo {
+        width: 30px;
+    }
+    .company-name {
+        font-size: 2rem;
+        margin: 10px;
+    }
+    .header-title p {
+        max-width: 85%;
+    }
+    .num {
+        max-width: 70%;
+    }
+    .footer-text {
+        text-align: center;
+    }
+    .footer-text p {
+        max-width: 100%;
+    }
+    .border-end {
+        border-right: none !important;
+    }
+}
+
+/* Responsive for portrait phones, less than 576px Size */
+@media (max-width: 576px) {
+    .header {
+        padding-top: 25%;
+    }
+    .navbar-brand span {
+        font-size: 0.8rem;
+    }
+    .navbar-brand span:last-child {
+        margin-top: -8px;
+    }
+    /* .navbar-light .navbar-nav .nav-link.active::after {
+        display: none;
+    }
+    .navbar-nav {
+        position: absolute;
+        width: 90%;
+        
+        align-items: center;
+        justify-content: center;
+        background-color: var(--sec-color);
+        z-index: 100;
+    }
+    .navbar-brand {
+        font-size: 0.9rem;
+    }
+    .navbar-brand span:last-child {
+        margin-top: -5px;
+    } */
+    .header-title p {
+        max-width: 100%;
+    }
+    
+ 
+}
+
+/* Responsive for small phones Size */
+@media (max-width: 360px) {
+    .header-title {
+        height: auto;
+        margin-top: 20px;
+    }
+}
