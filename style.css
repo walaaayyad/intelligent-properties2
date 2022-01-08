@@ -1,4 +1,8 @@
 /************ Global ***************/
+* {
+    margin: 0;
+    padding: 0;
+}
 :root {
     --main-color : #F0A500;
     --sec-color : #252525;
@@ -184,22 +188,19 @@ body {
 
 /* scroll up btn */
 .scrollUpBtn {
+    width: 45px;
+    height: 45px;
     opacity: 1;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
+    cursor: pointer !important;
     outline: none;
     background-color: transparent;
     border: 3px solid var(--main-color);
     color: var(--main-color);
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+    text-align: center;
 }
 .scrollUpBtn.hidden {
     opacity: 0;
