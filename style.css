@@ -8,6 +8,7 @@
     --sec-color : #252525;
 }
 body {
+    width: 100%;
     font-family: serif;
     overflow-x: hidden;
 }
