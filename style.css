@@ -27,6 +27,7 @@ body {
     color: #fff;
     text-transform: uppercase;
     font-size: 10px;
+    padding-right: 10px;
 }
 /*********** Bootstrap btn **************/
 .btn {
@@ -41,12 +42,6 @@ body {
 
 /*     test    */
 /* start navbar */
-.info {
-    display: flex;
-    position: absolute;
-    top: 2px;
-    right: 40%;
-}
 .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(240, 165, 0)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
@@ -54,6 +49,7 @@ body {
     border-color: var(--main-color);
 }
 .navbar-bg {
+    padding-top: 5px !important;
     background-color: var(--sec-color);
     border-bottom: 1px solid var(--main-color);
     transition: all 0.4s ease-in;
