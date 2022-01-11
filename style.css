@@ -17,8 +17,6 @@ body {
 .info-bar {
     height: 40px; 
     background-color: #272827;
-}
-.info-bar {
     color: #fff;
     text-transform: uppercase;
     font-size: 10px;
@@ -101,7 +99,7 @@ body {
 }
 /************  logo  **************/
 .logo {
-    width: 50px;
+    width: 40px;
 }
 .flip {
     animation-name: flip;
@@ -145,26 +143,27 @@ body {
     
 /************** header ***************/
 .header {
-    height: 95%;
-    padding-top: 10%;
+    height: 100vh;
     background-image: url('./img/sun16.jpg');
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover; 
     background-color: rgba(0, 0, 0, 0.6); 
     background-blend-mode: darken;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .header-title {
-    height: inherit;
     color: #fff;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 .company-name {
     font-size: 3rem;
 }
 .header-title p {
-    max-width: 55%;
+    max-width: 60%;
 }
 .orang-color {
     color: var(--main-color);
@@ -189,8 +188,6 @@ body {
 
 /* scroll up btn */
 .scrollUpBtn {
-    width: 45px;
-    height: 45px;
     opacity: 1;
     position: fixed;
     bottom: 20px;
@@ -300,6 +297,9 @@ footer .rights {
         font-size: 2rem;
         margin: 10px;
     }
+    .header {
+        padding-top: 20%;
+    }
     .header-title p {
         max-width: 85%;
     }
@@ -318,6 +318,11 @@ footer .rights {
 }
 
 /* Responsive for portrait phones, less than 576px Size */
+@media (max-width: 768px) and (max-height: 320px) {
+    .header {
+        height: auto;
+    }
+}
 @media (max-width: 576px) {
     .header {
         padding-top: 25%;
@@ -356,7 +361,7 @@ footer .rights {
 /* Responsive for small phones Size */
 @media (max-width: 360px) {
     .header-title {
-        height: auto;
-        margin-top: 20px;
-    }
+        font-size: 1rem;
+        margin-top: 10%;
+    } 
 }
