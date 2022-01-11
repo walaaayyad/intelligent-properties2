@@ -432,6 +432,7 @@ and (max-width: 800px)
 and (max-height: 480px) {
     .header {
        height: 100%;
+       padding-top: 20%;
     }
  }
 /* Responsive for small phones Size */
