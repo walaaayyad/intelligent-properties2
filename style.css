@@ -11,7 +11,7 @@
     padding: 0;
 }
 :root {
-    --main-color : #F0A500;
+    --main-color : #f0a500;
     --sec-color : #252525;
 }
 body {
@@ -38,7 +38,66 @@ body {
     color: #fff;
     background-color: var(--main-color);
 }
-/************* nav *************/
+
+/*     test    */
+/* start navbar */
+.info {
+    display: flex;
+    position: absolute;
+    top: 2px;
+    right: 40%;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(240, 165, 0)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-light .navbar-toggler {
+    border-color: var(--main-color);
+}
+.navbar-bg {
+    background-color: var(--sec-color);
+    border-bottom: 1px solid var(--main-color);
+    transition: all 0.4s ease-in;
+}
+.navbar-brand {
+    font-size: 0.8rem;
+}
+.navbar .nav-link {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--main-color) !important;
+    border-bottom: 1px solid var(--main-color) !important;
+    transition: all 0.4s ease;
+}
+
+/* start home section */
+#home {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('./img/sun16.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+#home h1 {
+    font-weight: 700;
+}
+#home p{
+    max-width: 550px;
+    margin: auto;
+}
+.orang-color {
+    color: var(--main-color);
+}
+/* end home section */
+
+/*     end test    */
+
+/************* nav *************
 .header-navbar {
     width: 96%;
     background-color: transparent;
@@ -96,7 +155,7 @@ body {
     color: var(--main-color);
     border-bottom: 2px solid var(--main-color);
 }
-/*  burger  */
+/*  burger  *
 .burger {
     display: none;
     margin-right: 20px;
@@ -201,7 +260,7 @@ body {
     } 
 }
     
-/************** header ***************/
+/************** header ***************
 .header {
     height: 100vh;
     background-image: url('./img/sun16.jpg');
@@ -351,6 +410,9 @@ footer .rights {
 
 /* Responsive for Tab Size */
 @media (max-width: 768px) {
+    .info {
+        right: 30%;
+    }
     .nav-links {
         opacity: 0;
         position: absolute;
@@ -414,6 +476,9 @@ footer .rights {
 
 /* Responsive for portrait phones, less than 576px Size */
 @media (max-width: 576px) {
+    .info {
+        display: none;
+    }
     .header {
         padding-top: 25%;
     }
@@ -421,18 +486,21 @@ footer .rights {
         font-size: 0.8rem;
     }
     .navbar-brand span:last-child {
-        margin-top: -8px;
+        margin-top: -5px;
     }
     .header-title p {
         max-width: 100%;
     }
 }
 @media screen and (orientation:landscape) 
-and (max-width: 800px) 
+and (max-width: 768px) 
 and (max-height: 480px) {
-    .header {
+    #home {
        height: 100%;
-       padding-top: 20%;
+       padding-top: 18%;
+    }
+    .info {
+        right: 30%;
     }
  }
 /* Responsive for small phones Size */

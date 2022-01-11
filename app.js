@@ -1,18 +1,19 @@
 /* start navbar */
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
+const navbar = document.querySelector('.navbar');
 const headerNavbar = document.querySelector('.header-navbar');
 
-const navSlide = ()=> {
-    burger.addEventListener('click', ()=> {
-      nav.classList.toggle('show');
-    });
-  }
-const navClose = ()=> {
-    nav.classList.remove('show');
-}
+// const navSlide = ()=> {
+//     burger.addEventListener('click', ()=> {
+//       nav.classList.toggle('show');
+//     });
+//   }
+// const navClose = ()=> {
+//     nav.classList.remove('show');
+// }
 
-  navSlide();
+//   navSlide();
 /* end navbar */
 
 /* start animations for sections */
@@ -64,10 +65,10 @@ const init= (e)=> {
 
 const scrollHandeler = ()=> {
 if(window.scrollY >= 70) {
-    headerNavbar.classList.add('fixed');
+    navbar.classList.add('navbar-bg');
     scrollUpBtn.classList.remove('hidden');
 }else{
-    headerNavbar.classList.remove('fixed');
+    navbar.classList.remove('navbar-bg');
     scrollUpBtn.classList.add('hidden');
 
   }
@@ -79,15 +80,15 @@ window.addEventListener('scroll', ()=> {
   });
 
 /* start nav bar fixed issues */
- const navLinks = document.querySelectorAll('.nav-link')
- const menuToggle = document.getElementById('navbarNavDropdown')
+// const navLinks = document.querySelectorAll('.nav-link')
+// const menuToggle = document.getElementById('navbarNav')
  
- const menu = ()=> {
-    const bsCollapse = new bootstrap.Collapse(menuToggle);
-    navLinks.forEach((l) => {
-        l.addEventListener('click', () => { bsCollapse.toggle() })
-    })
- }
+// const menu = ()=> {
+//    const bsCollapse = new bootstrap.Collapse(menuToggle);
+//    navLinks.forEach((l) => {
+//        l.addEventListener('click', () => { bsCollapse.toggle() })
+//    })
+// }
 
 //  window.addEventListener('load', (event) => {
 //     console.log('page is fully loaded');
