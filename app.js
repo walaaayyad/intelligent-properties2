@@ -1,25 +1,21 @@
-/* start navbar */
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav-links');
-const navbar = document.querySelector('.navbar');
-const headerNavbar = document.querySelector('.header-navbar');
+const navLinks = document.querySelectorAll('.nav-item')
+const menuToggle = document.getElementById('navbarNav')
+const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false})
 
-// const navSlide = ()=> {
-//     burger.addEventListener('click', ()=> {
-//       nav.classList.toggle('show');
-//     });
-//   }
-// const navClose = ()=> {
-//     nav.classList.remove('show');
-// }
-
-//   navSlide();
-/* end navbar */
-
-/* start animations for sections */
 const faders = document.querySelectorAll('.fade-in');
 const sliders = document.querySelectorAll('.slide-in');
 
+const scrollUpBtn = document.querySelector('.scrollUpBtn');
+const navbar = document.querySelector('.navbar');
+
+
+/* navbar menu collapse when click on the link */
+navLinks.forEach((l) => {
+    l.addEventListener('click', () => { bsCollapse.toggle() })
+})
+
+
+/* start animations for sections */
 const appearOptions = {
     threshold: 0,
     rootMargin: "0px 0px -100px 0px"
@@ -49,11 +45,8 @@ faders.forEach(fader => {
 sliders.forEach(slide => {
     appearOnScroll.observe(slide);
 })
-/* end animations for sections */
 
 /* start scroll up btn */
-const scrollUpBtn = document.querySelector('.scrollUpBtn');
-
 const scrollToTop = () => {
     scrollUpBtn.classList.add('hidden');
     window.scrollTo(0,0);
@@ -61,6 +54,7 @@ const scrollToTop = () => {
 
 const init= (e)=> {
     scrollUpBtn.classList.add('hidden');
+    console.log('start')
 }
 
 const scrollHandeler = ()=> {
@@ -78,19 +72,3 @@ window.addEventListener('load', init);
 window.addEventListener('scroll', ()=> {
     scrollHandeler();
   });
-
-/* start nav bar fixed issues */
-// const navLinks = document.querySelectorAll('.nav-link')
-// const menuToggle = document.getElementById('navbarNav')
- 
-// const menu = ()=> {
-//    const bsCollapse = new bootstrap.Collapse(menuToggle);
-//    navLinks.forEach((l) => {
-//        l.addEventListener('click', () => { bsCollapse.toggle() })
-//    })
-// }
-
-//  window.addEventListener('load', (event) => {
-//     console.log('page is fully loaded');
-//   });
-//  menuToggle.addEventListener('click', menu);
