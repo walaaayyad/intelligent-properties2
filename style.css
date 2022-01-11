@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 /************ Global ***************/
 * {
     margin: 0;
@@ -36,9 +43,17 @@ body {
     width: 96%;
     background-color: transparent;
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-transition: all 0.7s ease-in;
+    -o-transition: all 0.7s ease-in;
     transition: all 0.7s ease-in;
 }
 .fixed {
@@ -48,6 +63,8 @@ body {
     top: 0;
     left: 0;
     z-index: 100;
+    -webkit-transition: all 0.7s ease-in;
+    -o-transition: all 0.7s ease-in;
     transition: all 0.7s ease-in;
 }
 .navbar-brand span:first-child {
@@ -67,6 +84,8 @@ body {
 .nav-links li a {
     color: #fff;
     text-decoration: none;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 .nav-links li a.active {
@@ -79,36 +98,44 @@ body {
 }
 /*  burger  */
 .burger {
-  display: none;
-  margin-right: 20px;
+    display: none;
+    margin-right: 20px;
 }
 .burger div {
-  width: 25px;
-  height: 3px;
-  background-color: var(--main-color);
-  margin: 5px;
+    width: 25px;
+    height: 3px;
+    background-color: var(--main-color);
+    margin: 5px;
 }
 .toggle .line1 {
-  transform: rotate(-45deg) translate(-5px,6px);
+    -webkit-transform: rotate(-45deg) translate(-5px,6px);
+    -ms-transform: rotate(-45deg) translate(-5px,6px);
+    transform: rotate(-45deg) translate(-5px,6px);
 }
 .toggle .line2 {
-  opacity: 0;
+    opacity: 0;
 }
 .toggle .line3 {
-  transform: rotate(45deg) translate(-5px,6px);
+    -webkit-transform: rotate(45deg) translate(-5px,6px);
+    -ms-transform: rotate(45deg) translate(-5px,6px);
+    transform: rotate(45deg) translate(-5px,6px);
 }
 /************  logo  **************/
 .logo {
     width: 40px;
 }
 .flip {
+    -webkit-animation-name: flip;
     animation-name: flip;
-  animation-duration: 5000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; 
+    -webkit-animation-duration: 5000ms;
+    animation-duration: 5000ms;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear; 
 }
 
-    @keyframes flip {
+@-webkit-keyframes flip {
     0% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
     transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
@@ -140,6 +167,39 @@ body {
     animation-timing-function: ease-in;
     } 
     }
+
+@keyframes flip {
+    0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    }
+    40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 60px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 60px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    } 
+    50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 60px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 60px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    } 
+    80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    } 
+    100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    } 
+}
     
 /************** header ***************/
 .header {
@@ -150,8 +210,14 @@ body {
     background-size: cover; 
     background-color: rgba(0, 0, 0, 0.6); 
     background-blend-mode: darken;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 .header-title {
@@ -170,22 +236,35 @@ body {
 }
 /* add animation for title */
 .from-left {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-column: 2 / 3;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 .from-right {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
     grid-column: 3 / 4;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
     transform: translateX(50%);
 }
 .from-left,
 .from-right {
+    -webkit-transition: -webkit-transform 1s ease-in;
+    transition: -webkit-transform 1s ease-in;
+    -o-transition: transform 1s ease-in;
     transition: transform 1s ease-in;
+    transition: transform 1s ease-in, -webkit-transform 1s ease-in;
 }
 .from-left.appear,
 .from-right.appear {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
     transform: translateX(0);
 }
-
 /* scroll up btn */
 .scrollUpBtn {
     opacity: 1;
@@ -204,7 +283,6 @@ body {
     opacity: 0;
 }
 /************** About ****************/
-
 #about p {
     color: #000;
 }
@@ -225,9 +303,14 @@ body {
 }
 .num {
     height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-size: 2rem;
+    -webkit-box-shadow: 1px 1px 3px var(--main-color);
     box-shadow: 1px 1px 3px var(--main-color);
     color: var(--main-color);
     margin: auto;
@@ -239,6 +322,8 @@ body {
 }
 .fade-in {
     opacity: 0;
+    -webkit-transition: opacity 1s ease-in;
+    -o-transition: opacity 1s ease-in;
     transition: opacity 1s ease-in;
 }
 .fade-in.appear {
@@ -274,10 +359,20 @@ footer .rights {
         height: 200px;
         width: 50%;
         background-color: var(--sec-color);
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
+        -webkit-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
         transition: all 0.5s ease-in;
         z-index: 100 !important;
       }
@@ -334,29 +429,9 @@ footer .rights {
     .navbar-brand span:last-child {
         margin-top: -8px;
     }
-    /* .navbar-light .navbar-nav .nav-link.active::after {
-        display: none;
-    }
-    .navbar-nav {
-        position: absolute;
-        width: 90%;
-        
-        align-items: center;
-        justify-content: center;
-        background-color: var(--sec-color);
-        z-index: 100;
-    }
-    .navbar-brand {
-        font-size: 0.9rem;
-    }
-    .navbar-brand span:last-child {
-        margin-top: -5px;
-    } */
     .header-title p {
         max-width: 100%;
     }
-    
- 
 }
 
 /* Responsive for small phones Size */
