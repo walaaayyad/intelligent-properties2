@@ -318,9 +318,10 @@ footer .rights {
 }
 
 /* Responsive for portrait phones, less than 576px Size */
-@media (max-width: 768px) and (max-height: 320px) {
+@media (max-width: 800px) and (max-height: 320px) {
     .header {
-        height: auto;
+        height: inherit;
+        padding-top: 20%;
     }
 }
 @media (max-width: 576px) {
