@@ -19,7 +19,9 @@ body {
     font-family: serif;
     overflow-x: hidden;
 }
-
+span {
+    color: #fff;
+}
 /************* Info ****************/
 .info-bar {
     height: 40px; 
@@ -400,6 +402,10 @@ footer p {
 footer .rights {
     letter-spacing: 2px;
     opacity: 0.8;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
 }
 
 
